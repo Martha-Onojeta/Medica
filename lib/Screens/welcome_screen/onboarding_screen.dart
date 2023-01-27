@@ -138,6 +138,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                         )
                                       : GestureDetector(
                                           onTap: (() {
+                                            _controller.nextPage(
+                                                    duration: const Duration(
+                                                        milliseconds: 500),
+                                                    curve: Curves.easeInOut);
                                            // Navigator.pushReplacementNamed(
                                                 //context, WelcomeScreen.route);
                                           }),
@@ -150,7 +154,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                                     BorderRadius.circular(10)),
                                             child:  Center(
                                               child: Text(
-                                                'Get started',
+                                                'Next',
                                                 style: TextStyle(
                                                     fontFamily: "Montserrat",
                                                     color:
